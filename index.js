@@ -131,12 +131,25 @@ var finances = [
     
     average = Math.round((netChangeSum / 86) * 100) /100;
     
-// Concatenation
-analysis = 'Financial Analysis' + '\n' +
-'--------------------' + '\n' +
-'Total Months: ' + months + '\n' +
-'Total: $' + total + '\n' +
-'Average Change: ' + average + '\n' +
-'Greatest Increase in Profit: ' + greatest[0] + ': $' + greatest[1] + '\n' +
-'Greatest Decrease in Profit: ' + least[0] + ': $' + least[1] + '\n';
- 
+    // Concatenation
+    // analysis = 'Financial Analysis' + '\n' +
+    // '--------------------' + '\n' +
+    // 'Total Months: ' + months + '\n' +
+    // 'Total: $' + total + '\n' +
+    // 'Average Change: ' + average + '\n' +
+    // 'Greatest Increase in Profit: ' + greatest[0] + ': $' + greatest[1] + '\n' +
+    // 'Greatest Decrease in Profit: ' + least[0] + ': $' + least[1] + '\n';
+    
+    
+    // String literal
+    analysis = `
+    Financial Analysis
+    ------------------
+    Total Months: ${months}
+    Total: $ ${total}
+    Average Change: ${average} 
+    Greatest Increase in Profit: ${greatest[0]}: $${greatest[1]}
+    Greatest Decrease in Profit: ${least[0]}: $${least[1]}
+    `
+    
+    console.log(analysis)
