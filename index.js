@@ -125,3 +125,18 @@ var finances = [
         }
     }
     
+    for(let index = 0; index < netArray.length; index++){
+        netChangeSum = netChangeSum + netArray[index];
+    }
+    
+    average = Math.round((netChangeSum / 86) * 100) /100;
+    
+// Concatenation
+analysis = 'Financial Analysis' + '\n' +
+'--------------------' + '\n' +
+'Total Months: ' + months + '\n' +
+'Total: $' + total + '\n' +
+'Average Change: ' + average + '\n' +
+'Greatest Increase in Profit: ' + greatest[0] + ': $' + greatest[1] + '\n' +
+'Greatest Decrease in Profit: ' + least[0] + ': $' + least[1] + '\n';
+ 
